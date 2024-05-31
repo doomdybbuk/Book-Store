@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidlit Navigators-Home</title>
+    <link rel="icon" href="https://e825yiqcosb.exactdn.com/wp-content/themes/kidlittv-bones/library/images/kidlit-sitelogo-small@2x.png?strip=all&lossy=1&ssl=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Jersey+20+Charted&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Jersey 15', sans-serif;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            background-color:#333;
+            overflow:hidden;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center; /* Center vertically */
+            font-size:40px;
+            color:white;
+            cursor:pointer;
+        }
+        
+        .logo {
+            margin-right: auto; /* Push the logo to the left */
+            padding-left:30px;
+        }
+        
+        .navbar-logo {
+            width: 100px; /* Adjust the width as needed */
+            height: 100px; /* Adjust the height as needed */
+             /* Make it circular */
+            /* Add any other styles you want to apply */
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end; /* Align items to the extreme right */
+            padding-right: 20px; /* Add padding to the right of the navbar */
+        }
+        
+        .navbar ul li {
+            padding: 10px 20px; /* Add padding around each navigation link */
+            margin-right: 10px; /* Add spacing between each navigation link */
+            border-bottom: 1px solid transparent; /* Initially set transparent border */
+            position: relative; /* Position relative for absolute positioning of the pseudo-element */
+        }
+        
+        .navbar ul li:after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 1px;
+            display: block;
+            transition: all 0.3s ease;
+            bottom: 0;
+            left: 0; /* Start from the left */
+            background-color: #fff; /* Default color of the line */
+        }
+        
+        .navbar ul li:hover::after {
+            width: 100%; /* Expand the line on hover */
+        }
+        
+        
+
+        .navbar ul li:hover {
+            background-color: #555;
+        }
+
+        .main-content {
+            display: flex;
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .shopping-section {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #f0f0f0; /* Light gray background */
+        }
+
+        .chatbot-section {
+            width: 300px; /* Width of the chatbot section */
+            padding: 20px;
+            background-color: #f0f0f0; /* Light gray background */
+        }
+
+        h1 {
+            font-size: 100px;
+            text-align: center;
+            color:white;
+        }
+
+        /* Styling for the welcome message */
+        .welcome-message {
+            padding: 20px;
+            background-color: #0070c9; /* Blue background */
+            color: white;
+            font-size: 24px;
+        }
+
+        .container {
+            display: flex;
+        }
+        
+        .store, .chatbot {
+            width: 50%; /* Each takes 50% of the container */
+            height: 300px; /* Adjust height as needed */
+            border: 1px solid #ccc; /* Just for visualization */
+            box-sizing: border-box;
+            border-radius:10px; /* Include padding and border in the width/height */
+        }
+        .store {
+            text-align: center;
+        }
+        
+        .card {
+            display: inline-block;
+            width: 200px;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        .card h2 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        
+        .card p {
+            margin: 5px 0;
+        }
+        
+        .card button {
+            background-color: #0070c9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .card button:hover {
+            background-color: #005aa7;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://e825yiqcosb.exactdn.com/wp-content/themes/kidlittv-bones/library/images/kidlit-sitelogo-small@2x.png?strip=all&lossy=1&ssl=1" alt="Logo" class="navbar-logo">
+        </div>
+        <ul>
+            <li>Home</li>
+            <li>Profile</li>
+            <li>Settings</li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </div>
+    <h1>Welcome User!</h1>
+    <div class="container">
+        <div class="store">
+            <h1>Store</h1>
+            <div class="card">
+                <img src="book1.jpg" alt="Book 1">
+                <h2>Book Title</h2>
+                <p>Author: Author Name</p>
+                <p>Price: $10.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="book2.jpg" alt="Book 2">
+                <h2>Book Title</h2>
+                <p>Author: Author Name</p>
+                <p>Price: $12.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="chatbot">
+            <h1>Chatbot</h1>
+        </div>
+    </div>
+    
+
+</body>
+</html>
